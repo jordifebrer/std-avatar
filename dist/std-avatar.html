@@ -1,0 +1,42 @@
+<!-- Import Polymer -->
+<link rel="import" href="../../polymer/polymer.html">
+
+<!-- jef-avatar - custom element -->
+<polymer-element name="jef-avatar" attributes="photoUrl, name">
+
+  <template>
+    <div hidden?="{{!photoUrl}}"
+         id="photoContainer">
+      <img src="{{photoUrl}}" />
+    </div>
+    <div id="jefData">
+      <h3>{{name}}<h3>
+    </div>
+  </template>
+
+  <script>
+    Polymer('jef-avatar');
+  </script>
+
+</polymer-element>
+
+<!-- std-avatar - custom element -->
+<polymer-element name="std-avatar" extends="jef-avatar" attributes="email, numberId, organisation, city">
+
+  <template>
+    <shadow></shadow>
+    <hr />
+    <div id="stdData">
+      <p hidden?="{{!email}}">E-mail: {{email}}</p>
+      <p hidden?="{{!numberId}}">Number ID: {{numberId}}</p>
+      <p hidden?="{{!organisation}}">Organisation: {{organisation}}</p>
+      <p hidden?="{{!city}}">City: {{city}}</p>
+      <content></content>
+    </div>
+  </template>
+
+  <script>
+    Polymer('std-avatar');
+  </script>
+
+</polymer-element>

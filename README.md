@@ -2,10 +2,6 @@
 
 > Web Component STD Avatar using Polymer
 
-## Demo
-
-[Check it live!](http://jordifebrer.github.io/std-avatar)
-
 ## Install
 
 Install the component using [Bower](http://bower.io/):

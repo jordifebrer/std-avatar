@@ -28,15 +28,32 @@ module.exports = function(grunt) {
                     to: '..'
                 }]
             }
+        },
+        'bump': {
+            options: {
+                files: ['bower.json'],
+                updateConfigs: [],
+                commit: true,
+                commitMessage: 'Release v%VERSION%',
+                commitFiles: ['bower.json'],
+                createTag: true,
+                tagName: 'v%VERSION%',
+                tagMessage: 'Version %VERSION%',
+                push: true,
+                pushTo: 'upstream',
+                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-text-replace');
+    grunt.loadNpmTasks('grunt-bump');
 
     grunt.registerTask('build',  ['replace']);
     grunt.registerTask('deploy', ['gh-pages']);
     grunt.registerTask('server', ['connect']);
+    grunt.registerTask('bump',   ['bump']);
 
 };

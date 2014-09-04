@@ -1,6 +1,6 @@
 {
     "name": "std-avatar",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Web Component STD Avatar using Polymer",
     "license": "MIT",
     "main": "dist/std-avatar.html",

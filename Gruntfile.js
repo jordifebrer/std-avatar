@@ -54,6 +54,6 @@ module.exports = function(grunt) {
     grunt.registerTask('build',  ['replace']);
     grunt.registerTask('deploy', ['gh-pages']);
     grunt.registerTask('server', ['connect']);
-    grunt.registerTask('bump',   ['bump']);
+    grunt.registerTask('release',['bump']);
 
 };

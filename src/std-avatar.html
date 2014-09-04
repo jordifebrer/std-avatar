@@ -24,13 +24,18 @@
 <polymer-element name="std-avatar" extends="jef-avatar" attributes="email, numberId, organisation, city">
 
   <template>
+    <style type="text/css">
+      :host {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
     <shadow></shadow>
     <hr />
     <div id="stdData">
-      <p hidden?="{{!email}}">E-mail: {{email}}</p>
-      <p hidden?="{{!numberId}}">Number ID: {{numberId}}</p>
-      <p hidden?="{{!organisation}}">Organisation: {{organisation}}</p>
-      <p hidden?="{{!city}}">City: {{city}}</p>
+      <p hidden?="{{!email}}"><b>E-mail</b>: {{email}}</p>
+      <p hidden?="{{!numberId}}"><b>Number ID</b>: {{numberId}}</p>
+      <p hidden?="{{!organisation}}"><b>Organisation</b>: {{organisation}}</p>
+      <p hidden?="{{!city}}"><b>City</b>: {{city}}</p>
       <content></content>
     </div>
   </template>
